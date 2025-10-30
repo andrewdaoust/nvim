@@ -24,12 +24,20 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			vim.lsp.enable("lua_ls")
-			vim.lsp.enable("ansiblels")
-			vim.lsp.enable("pyright")
-			vim.lsp.enable("gopls")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			vim.lsp.enable("lua_ls")
+			vim.lsp.config("lua_ls", { capabilities = capabilities })
+
+			vim.lsp.enable("ansiblels")
+			vim.lsp.config("ansiblels", { capabilities = capabilities })
+
+			vim.lsp.enable("pyright")
+			vim.lsp.config("pyright", { capabilities = capabilities })
+
+			vim.lsp.enable("gopls")
 			vim.lsp.config("gopls", {
+				capabilities = capabilities,
 				settings = {
 					gopls = {
 						staticcheck = true,
