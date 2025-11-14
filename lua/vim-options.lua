@@ -29,3 +29,5 @@ vim.diagnostic.config({
 		update_in_insert = false,
 	},
 })
+
+vim.opt.foldlevelstart = 99
