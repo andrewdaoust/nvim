@@ -28,9 +28,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Config
 alias rc="nvim ~/.zshrc"
+alias awsconfig="code ~/.aws"
+alias sshconfig="code ~/.ssh"
+
+# Tool shortcuts
 alias p=pulumi
 alias k="kubectl"
+
+# Typos
+alias dc="cd"
+alias docekr="docker"
+alias gt="git"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -57,7 +68,27 @@ export PATH=$PATH:$GOPATH/bin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 alias kn="kubectl ns"
 alias kc="kubectl ctx"
+# alias kc="kubectx"
+# alias kn="kubens"
+# alias kc="kubie ctx"
+# alias kn="kubie ns"
+alias pods="kubectl get pods"
+alias pdos="kubectl get pods"
+alias deploy="kubectl get deploy"
+alias svc="kubectl get svc"
+alias nodes="kubectl get nodes"
+alias kwp="watch kubectl get pods"
+alias kwnp="watch kubectl get nodes,pods"
+alias krrd="kubectl rollout restart deployment"
+alias kg="kubectl get"
+alias kl="kubectl logs"
+alias klf="kubectl logs -f"
 
 # Love2D for Lua game development
 export PATH=$PATH:/Applications/love.app/Contents/MacOS/
 
+WORK_OVERRIDES="$HOME/.zshrc.fcx"
+if [ -f "$WORK_OVERRIDES" ]; then
+  source "$WORK_OVERRIDES"
+#   echo "Successfully sourced $WORK_OVERRIDES"
+fi
