@@ -28,5 +28,6 @@
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "vim-test": { "branch": "master", "commit": "8db0f2074d989d452e5ad4b11e01bb5aa0787a01" },
   "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
-  "vimux": { "branch": "master", "commit": "614f0bb1fb598f97accdcea71d5f7b18d7d62436" }
+  "vimux": { "branch": "master", "commit": "614f0bb1fb598f97accdcea71d5f7b18d7d62436" },
+  "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
 }
