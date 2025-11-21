@@ -10,6 +10,8 @@ vim.opt.tabstop = TAB_SIZE
 vim.opt.softtabstop = TAB_SIZE
 vim.opt.shiftwidth = TAB_SIZE
 
+vim.o.splitright = true
+
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')

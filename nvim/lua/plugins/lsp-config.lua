@@ -15,6 +15,7 @@ return {
 					"gopls",
 					"eslint",
 					"ts_ls",
+                    "svelte",
 
 					"stylua",
 					--"prettier",
@@ -52,6 +53,9 @@ return {
 
 			vim.lsp.enable("ts_ls")
 			vim.lsp.config("ts_ls", { capabilities = capabilities })
+
+            vim.lsp.enable("svelte")
+            vim.lsp.config("svelte", { capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
