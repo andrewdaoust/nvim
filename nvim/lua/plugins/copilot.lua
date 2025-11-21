@@ -33,6 +33,7 @@ return {
 			},
 		},
 		config = function()
+            vim.keymap.set("i", "<S-CR>", "<CR>", { buffer = true })
 			vim.api.nvim_create_autocmd("BufEnter", {
 				pattern = "copilot-*",
 				callback = function()
